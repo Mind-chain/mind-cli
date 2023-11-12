@@ -1,0 +1,31 @@
+{
+  "name": "mind-cli",
+  "version": "1.0.0",
+  "description": "A command line application to intract with mind-smart-chain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mind-chain/mind-cli.git"
+  },
+  "keywords": [
+    "mind.js",
+    "mind-cli"
+  ],
+  "author": "https://github.com/nnlgsakib",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mind-chain/mind-cli/issues"
+  },
+  "homepage": "https://github.com/Mind-chain/mind-cli#readme",
+  "devDependencies": {
+    "ethers": "^5.5.4",
+    "web3": "^4.2.2"
+  },
+  "dependencies": {
+    "commander": "^11.1.0",
+    "nexe": "^4.0.0-rc.2"
+  }
+}
