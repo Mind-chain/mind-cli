@@ -21,10 +21,13 @@
   },
   "homepage": "https://github.com/Mind-chain/mind-cli#readme",
   "devDependencies": {
+    "axios": "^1.6.1",
     "ethers": "^5.5.4",
     "web3": "^4.2.2"
   },
   "dependencies": {
+    "asciichart": "^1.5.25",
+    "blessed": "^0.1.81",
     "commander": "^11.1.0",
     "nexe": "^4.0.0-rc.2"
   }
