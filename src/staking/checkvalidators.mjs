@@ -7,26 +7,24 @@ const erc20TokenAddress = '0x75E218790B76654A5EdA1D0797B46cBC709136b0'; // Repla
 
 async function checkValidators() {
   try {
-    // Create a data payload for the 'validators' function
-    const data = web3.eth.abi.encodeFunctionCall({
+    const validatorsData = web3.eth.abi.encodeFunctionCall({
       name: 'validators',
       type: 'function',
       inputs: [],
     }, []);
 
-    // Make a call to the contract to get the validators
+    const stakedAmountData = web3.eth.abi.encodeFunctionCall({
+      name: 'stakedAmount',
+      type: 'function',
+      inputs: [],
+    }, []);
+
     const validators = await web3.eth.call({
       to: contracts.staking,
-      data: data,
+      data: validatorsData,
     });
 
-    // Convert the result to an array of addresses
     const decodedValidators = web3.eth.abi.decodeParameter('address[]', validators);
-    const validatorsTable = decodedValidators.map((address, index) => ({ 'Validator': address, 'Index': index + 1 }));
-
-    console.log('List of Validators:');
-    console.table(validatorsTable);
-
     const erc20TokenABI = [
       {
         constant: true,
@@ -38,35 +36,35 @@ async function checkValidators() {
     ];
 
     const erc20TokenContract = new web3.eth.Contract(erc20TokenABI, erc20TokenAddress);
-    const rewardsTable = [];
+    const combinedTable = [];
 
-    for (const validator of decodedValidators) {
+    for (const [index, validator] of decodedValidators.entries()) {
       const rewardBalance = await erc20TokenContract.methods.balanceOf(validator).call();
       const decodedRewardBalance = web3.utils.fromWei(rewardBalance, 'ether');
-      rewardsTable.push({ 'Validator': validator, 'Reward Balance (TOKEN)': decodedRewardBalance });
+
+      combinedTable.push({
+        'Validator Address': validator,
+        'Reward Balance (PMIND)': decodedRewardBalance,
+      });
     }
 
-    console.log('Reward Balances for Validators:');
-    console.table(rewardsTable);
+    console.log('Validators and Reward Balances:');
+    console.table(combinedTable);
 
-    // Create a data payload for the 'stakedAmount' function
-    const stakedAmountData = web3.eth.abi.encodeFunctionCall({
-      name: 'stakedAmount',
-      type: 'function',
-      inputs: [],
-    }, []);
-
-    // Make a call to the contract to get the total staked amount
     const stakedAmount = await web3.eth.call({
       to: contracts.staking,
       data: stakedAmountData,
     });
 
-    // Convert the result to the total staked amount in MIND
     const decodedStakedAmountWei = web3.eth.abi.decodeParameter('uint256', stakedAmount);
     const decodedStakedAmountEther = web3.utils.fromWei(decodedStakedAmountWei, 'ether');
 
     console.log(`Total Staked Amount (MIND): ${decodedStakedAmountEther}`);
+
+    
+    setTimeout(() => {
+      process.exit(0); // Exit the script after the delay
+    }, 5);
   } catch (error) {
     console.error('Error:', error.message);
   }
