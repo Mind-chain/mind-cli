@@ -3,7 +3,7 @@ import { STAKING_ABI } from '../abi/stakingabi.mjs';
 import { urls, contracts } from '../constants.mjs';
 
 const web3 = new Web3(new Web3.providers.WebsocketProvider(urls.WS_rpc));
-const erc20TokenAddress = '0x75E218790B76654A5EdA1D0797B46cBC709136b0'; // Replace with the correct ERC20 token address
+const erc20TokenAddress = contracts.pmind;
 
 async function checkValidators() {
   try {
@@ -63,7 +63,7 @@ async function checkValidators() {
 
     
     setTimeout(() => {
-      process.exit(0); // Exit the script after the delay
+      process.exit(0); 
     }, 5);
   } catch (error) {
     console.error('Error:', error.message);
