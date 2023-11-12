@@ -1,7 +1,7 @@
 import { providers, Wallet } from 'ethers';
 import Web3 from 'web3';
-import { STAKING_ABI } from './../abi/stakingabi.mjs'; // Provide the correct path to your ABI
-import { urls, contracts } from './../constants.mjs'; // Provide the correct path to your constants
+import { STAKING_ABI } from './../abi/stakingabi.mjs';
+import { urls, contracts } from './../constants.mjs'; 
 
 const web3 = new Web3(urls.Http_rpc);
 const provider = new providers.JsonRpcProvider(urls.Http_rpc);
