@@ -1,6 +1,6 @@
 {
   "name": "msc-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A ts cli to interact with Mind-Smart-Chain",
   "main": "./dist/cli.js",
   "bin": {
