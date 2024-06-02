@@ -6,7 +6,8 @@ export interface Block {
     readableTimestamp?: string | any; // Optional property to store the readable timestamp
     [key: string]: any; // Allows adding additional properties to Block
 }
-export interface Address {
+export interface account {
     address: string;
     privateKey: string;
+    amount:number | any
 }
