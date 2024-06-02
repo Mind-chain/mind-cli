@@ -1,5 +1,5 @@
 {
-  "name": "mind-cli",
+  "name": "msc-cli",
   "version": "1.0.0",
   "description": "A ts cli to interact with Mind-Smart-Chain",
   "main": "./dist/cli.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mind-chain/mindcli-ts.git"
+    "url": "https://github.com/Mind-chain/mindcli-ts.git"
   },
   "keywords": [
     "MIND",
