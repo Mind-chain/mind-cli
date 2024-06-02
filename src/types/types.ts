@@ -7,7 +7,6 @@ export interface Block {
     [key: string]: any; // Allows adding additional properties to Block
 }
 export interface account {
-    // address: string;
     privateKey: string;
     amount:number | any
 }

@@ -2,20 +2,16 @@ import { ethers } from 'ethers';
 import { consensus, CONSENSUS_ABI } from './../../config/contracts';
 import { provider } from './../../config/provider';
 
-async function stakeCoins(privateKey: string): Promise<string> {
+async function unstakeCoins(privateKey: string): Promise<string> {
     const wallet = new ethers.Wallet(privateKey, provider);
 
     const contract = new ethers.Contract(consensus, CONSENSUS_ABI, wallet);
 
-    // Staking 10000 coins
-    const amountToStake = ethers.parseEther('10000');
-    const transaction = await contract.stake({
-        value: amountToStake
-    });
+    // Unstaking the entire amount
+    const transaction = await contract.unstake();
 
     await transaction.wait();
 
     return transaction.hash;
 }
-
-export { stakeCoins };
+export { unstakeCoins };
