@@ -1,5 +1,5 @@
 {
-  "name": "mindcli",
+  "name": "mind-cli",
   "version": "1.0.0",
   "description": "A ts cli to interact with Mind-Smart-Chain",
   "main": "./dist/cli.js",
