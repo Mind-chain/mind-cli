@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A ts cli to interact with Mind-Smart-Chain",
   "main": "./dist/cli.js",
+  "bin": {
+    "mind-cli": "./dist/cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc cli.ts --outdir dist --resolveJsonModule",
