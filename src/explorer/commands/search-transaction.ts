@@ -1,5 +1,5 @@
 import { provider } from "../../config/provider";
-import { Block } from "../../types/block";
+import { Block } from "../../types/types";
 
 type BlockNumberOrNull = number | null;
 

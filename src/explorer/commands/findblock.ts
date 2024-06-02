@@ -1,5 +1,5 @@
 import { provider } from "../../config/provider";
-import { Block } from "../../types/block";
+import { Block } from "../../types/types";
 
 export async function findBlock(blockNumber: number): Promise<Block | null> {
     console.log(`Fetching block number: ${blockNumber}`); // Log the block number being fetched

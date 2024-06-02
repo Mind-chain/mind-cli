@@ -1,5 +1,5 @@
 import { provider } from "../../config/provider";
-import { Block } from "./../../types/block";
+import { Block } from "./../../types/types";
 
 export async function getCurrentBlockDetails(): Promise<Block | null > {
     try {
