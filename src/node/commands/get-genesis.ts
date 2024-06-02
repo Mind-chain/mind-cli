@@ -1,4 +1,4 @@
-import fs from 'fs';
+import * as fs from 'fs-extra'
 
 // Function to generate genesis JSON
 export function generateGenesisJson() {

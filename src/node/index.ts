@@ -1,6 +1,6 @@
 import { program } from "commander";
 import { generateGenesisJson } from "./commands/get-genesis";
-import {installMind} from "./commands/install-node";
+import installMind from "./commands/install-node";
 import {startMindServer} from "./commands/start-node";
 import {initSecrets} from "./commands/init-node"
  
