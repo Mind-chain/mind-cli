@@ -1,7 +1,7 @@
 const { build } = require('esbuild-wasm');
 
 build({
-  entryPoints: ['dist/cli.js'],
+  entryPoints: ['dist/src/cli.js'],
   bundle: true,
   platform: 'node',
   outfile: 'mind-cli.js'

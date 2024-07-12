@@ -2,9 +2,9 @@
   "name": "mindc",
   "version": "1.0.0",
   "description": "A ts cli to interact with Mind-Smart-Chain",
-  "main": "./dist/cli.js",
+  "main": "./dist/src/cli.js",
   "bin": {
-    "mind-cli": "./dist/cli.js"
+    "mind-cli": "./dist/src/cli.js"
   },
   "files": [
     "dist"
