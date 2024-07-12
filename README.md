@@ -1,0 +1,1 @@
+## Mind-CLI is a compact tool for intracting with MIND SMART CHAIN
