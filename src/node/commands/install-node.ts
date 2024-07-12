@@ -1,5 +1,6 @@
 import { execSync } from 'child_process';
 import * as fs from 'fs-extra';
+import * as os from 'os';
 import { SingleBar, Presets } from 'cli-progress';
 import axios from 'axios';
 
@@ -52,8 +53,12 @@ async function downloadAndInstallBinary(url: string, targetPath: string): Promis
 
       // Add a delay before executing the binary
       setTimeout(() => {
-        // Display the version of the application
-        execSync('./mind version', { stdio: 'inherit' });
+        if (os.platform() === 'linux') {
+          // Display the version of the application
+          execSync('./mind version', { stdio: 'inherit' });
+        } else {
+          console.log('MSC CORE Node CLI app is incompatible with this device. Please try Linux.');
+        }
       }, 1000);
     });
 
@@ -63,7 +68,7 @@ async function downloadAndInstallBinary(url: string, targetPath: string): Promis
         throw new Error(`Failed to download file: ${error.message}`);
       });
     });
-  } catch (error:any) {
+  } catch (error: any) {
     throw new Error(`Failed to download file: ${error.message}`);
   }
 }

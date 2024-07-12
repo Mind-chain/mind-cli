@@ -6,11 +6,21 @@
   "bin": {
     "mind-cli": "./dist/cli.js"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc cli.ts --outdir dist --resolveJsonModule",
+    "build": "tsc  --project tsconfig.json",
+    "build:win": "npm run build && node scripts/build_win.js && pkg mind-cli.js -o bin/mind-cli --target node18-win-x64",
+    "build:linux": "npm run build && node scripts/build_linux.js && pkg mind-cli.js -o bin/mind-cli",
     "start": "node dist/cli.js"
+  },
+  "pkg": {
+    "scripts":[
+      "node_modules/axios/**/*",
+      "dist/**/*.js"
+    ]
   },
   "repository": {
     "type": "git",
@@ -33,15 +43,22 @@
     "@types/cli-progress": "^3.11.5",
     "@types/fs-extra": "^11.0.4",
     "@types/progress": "^2.0.7",
+    "axios": "^0.27.2",
     "child_process": "^1.0.2",
     "cli-progress": "^3.12.0",
     "commander": "^12.1.0",
+    "esbuild": "^0.23.0",
+    "esbuild-wasm": "^0.23.0",
     "ethers": "^6.12.1",
     "fs-extra": "^11.2.0",
+    "latest": "^0.2.0",
     "msc-js": "^0.1.13",
     "node-fetch": "^3.3.2",
+    "pkg": "^5.8.1",
     "progress": "^2.0.3",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3"
   }
 }
