@@ -4,7 +4,7 @@ import { VERSION } from "./commands/version";
 export function versioning(versioning : typeof program) {
     versioning
     .version(VERSION)
-    .description("A CLI tool to display version and title");
+    .description("A CLI tool for intracting with MIND SMART CHAIN");
 
     versioning
     .command('version')
