@@ -13,7 +13,7 @@ async function downloadAndInstallBinary(url: string, targetPath: string): Promis
     const response = await octokit.repos.getReleaseByTag({
       owner: 'Mind-chain',
       repo: 'Msc-node',
-      tag: 'v1.0.7'
+      tag: 'v1.0.9'
     });
 
     const asset = response.data.assets.find(asset => asset.name === 'mind');
