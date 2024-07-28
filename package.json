@@ -17,7 +17,7 @@
     "start": "node dist/cli.js"
   },
   "pkg": {
-    "scripts":[
+    "scripts": [
       "node_modules/axios/**/*",
       "dist/**/*.js"
     ]
