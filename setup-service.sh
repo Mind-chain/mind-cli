@@ -3,8 +3,9 @@
 # Define variables
 SERVICE_NAME="mind-node.service"
 SERVICE_PATH="/etc/systemd/system/$SERVICE_NAME"
-WORKING_DIRECTORY="/root"
-EXEC_START="$WORKING_DIRECTORY/mind-cli node start-node"
+WORKING_DIRECTORY="$PWD"
+#EXEC_START="$WORKING_DIRECTORY/mind-cli node start-node"
+ExecStart=/bin/bash -c '$WORKING_DIRECTORY/mind-cli node start-node'
 
 # Create the service file
 echo "Creating $SERVICE_NAME service file..."
