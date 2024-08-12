@@ -7,6 +7,6 @@ sudo chmod +x mind-cli
 ./mind-cli version
 ./mind-cli node  install-node
 ./mind-cli node init-node 
-validator_key=$(cat data/consensus/validator.key)
 ./mind-cli node get-genesis
+validator_key=$(cat data/consensus/validator.key)
 echo "Privatkey: 0x$validator_key"
