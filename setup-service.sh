@@ -5,6 +5,7 @@ SERVICE_NAME="mind-node.service"
 SERVICE_PATH="/etc/systemd/system/$SERVICE_NAME"
 WORKING_DIRECTORY="$PWD"
 EXEC_START="/bin/bash -c '$WORKING_DIRECTORY/mind-cli node start-node'"
+USER=$(whoami)  # Auto-detect the current user
 
 # Create the service file
 echo "Creating $SERVICE_NAME service file..."
@@ -16,6 +17,7 @@ After=network.target
 
 [Service]
 Type=simple
+User=$USER
 WorkingDirectory=$WORKING_DIRECTORY
 ExecStart=$EXEC_START
 Restart=on-failure
