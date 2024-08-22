@@ -4,7 +4,7 @@ export function  initSecrets(): void {
   try {
       
     
-    const command = `./mind secrets init --data-dir data --insecure`;
+    const command = `./mind secrets init --data-dir data`;
 
     // Print the command being executed
     console.log(`Executing command: ${command}`);
