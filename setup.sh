@@ -1,4 +1,3 @@
-validator_key=$(cat data/consensus/validator.key)
 wget https://github.com/Mind-chain/mind-cli/releases/download/v1.0.1/mind-cli
 
 sudo chmod +x mind-cli
@@ -8,5 +7,3 @@ sudo chmod +x mind-cli
 ./mind-cli node  install-node
 ./mind-cli node init-node 
 ./mind-cli node get-genesis
-validator_key=$(cat data/consensus/validator.key)
-echo "Privatkey: 0x$validator_key"
