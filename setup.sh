@@ -1,4 +1,3 @@
-validator_key=$(cat data/consensus/validator.key)
 wget https://github.com/Mind-chain/mind-cli/releases/download/v1.0.1/mind-cli
 
 sudo chmod +x mind-cli
