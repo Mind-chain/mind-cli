@@ -1,5 +1,5 @@
 # Download the mind-cli executable
-Invoke-WebRequest -Uri "https://github.com/Mind-chain/mind-cli/releases/download/v1.0.0/mind-cli" -OutFile "mind-cli.exe"
+Invoke-WebRequest -Uri "https://github.com/Mind-chain/mind-cli/releases/download/v1.0.2/mind-cli" -OutFile "mind-cli.exe"
 
 # Make the file executable (PowerShell doesn't require chmod, so this step can be skipped)
 
