@@ -108,7 +108,7 @@ export function generateGenesisJson() {
           "validator_type": "ecdsa"
         }
       },
-      "blockGasTarget": 0,
+      "blockGasTarget": 0
     },
     "bootnodes": [
     "/ip4/37.60.239.84/tcp/10001/p2p/16Uiu2HAmUkuKgbDRaZzjE8SzNp3ptZcJCD8pFV2XwkZ9Tc2jpxaZ",
