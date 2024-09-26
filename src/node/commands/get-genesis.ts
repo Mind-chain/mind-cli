@@ -108,7 +108,11 @@ export function generateGenesisJson() {
           "validator_type": "ecdsa"
         }
       },
-      "blockGasTarget": 0
+      "blockGasTarget": 0,
+         "burnContract": {
+              "6342215": "0xF7C81F2aA9670223998D630D8185BA17Ef67f825"
+          },
+      "burnContractDestinationAddress": "0x0000000000000000000000000000000000000000"
     },
     "bootnodes": [
     "/ip4/37.60.239.84/tcp/10001/p2p/16Uiu2HAmUkuKgbDRaZzjE8SzNp3ptZcJCD8pFV2XwkZ9Tc2jpxaZ",
