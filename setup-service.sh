@@ -40,6 +40,8 @@ sudo systemctl enable $SERVICE_NAME
 
 # Display the service status
 echo "Displaying the status of $SERVICE_NAME..."
-sudo systemctl status $SERVICE_NAME
 
 echo "Setup complete!"
+
+
+sudo journalctl -u mind-node.service -f

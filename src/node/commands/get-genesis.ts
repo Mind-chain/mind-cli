@@ -115,12 +115,12 @@ export function generateGenesisJson() {
       "burnContractDestinationAddress": "0x0000000000000000000000000000000000000000"
     },
     "bootnodes": [
-      "/ip4/45.76.129.38/tcp/10001/p2p/16Uiu2HAkwD1SjmUwx1qrjRVw99zuQE9hRf7Vsmp1pMpiFZ4t144H",
-      "/ip4/104.238.173.226/tcp/10001/p2p/16Uiu2HAmC3j4SCSGHfYXqmn6AUtKNHCnwuwBvxbq555gKRH5XsFU",
-      "/ip4/216.155.135.137/tcp/10001/p2p/16Uiu2HAmN282voTxQjaw1jEGWyH5f6sctCZRCtQjPkesrtJKeqeH",
-      "/ip4/66.135.24.113/tcp/10001/p2p/16Uiu2HAm4U75Qru871t4GB1dsm4ZLb5Y7CQAELYLigZJP2TmR9oN",
-      "/ip4/107.191.42.220/tcp/10001/p2p/16Uiu2HAmSgT3kgpYWmtfB3NphVVCQtYikFpccKCK6ZipKmdV55tr",
-      "/ip4/144.202.13.7/tcp/10001/p2p/16Uiu2HAm4ujNpKKcERwzPsiHyJFTzW3vSbGSiEN3cqD3YbkKh9DQ"
+    "/ip4/37.60.239.84/tcp/10001/p2p/16Uiu2HAmUkuKgbDRaZzjE8SzNp3ptZcJCD8pFV2XwkZ9Tc2jpxaZ",
+    "/ip4/109.199.98.212/tcp/10001/p2p/16Uiu2HAmRg69463ZexFYvj5rXf4MDanbdW8ZqApgwJanK8zDmUMZ",
+    "/ip4/38.242.215.76/tcp/10001/p2p/16Uiu2HAkv89qRCAWRdUJuQL7NcdaSvUZNaoL6u8iE5SE8hCWUCqA",
+    "/ip4/62.169.22.67/tcp/10001/p2p/16Uiu2HAm5PtZSAvVRVQuWzmS1tdcYjmKRSnKWV5QUS3rWqV4AHFb",
+    "/ip4/62.169.22.102/tcp/10001/p2p/16Uiu2HAm24PEuv1hEyb58yUCnNeEtapT6A228ciMCCNYdKh9ESdq",
+    "/ip4/62.169.22.75/tcp/10001/p2p/16Uiu2HAmSfzgU2B8sKy9cbYNztDpokfXTR2LebCHfZvN5evrWthu"
     ]
   }
 

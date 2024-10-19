@@ -1,4 +1,4 @@
-wget https://github.com/Mind-chain/mind-cli/releases/download/v1.0.1/mind-cli
+wget https://github.com/Mind-chain/mind-cli/releases/download/v1.0.3/mind-cli
 
 sudo chmod +x mind-cli
 
